@@ -24,7 +24,7 @@ An ABI (Application Binary Interface) traditionally defines the interface betwee
 
 ### ABI generation
 
-- [near-sdk-rs](https://github.com/near/near-sdk-rs) (version `4.1.0-pre.1` and above) and [cargo-near](https://github.com/near/cargo-near): `cargo-near` is a [cargo](https://doc.rust-lang.org/cargo/) extention that is used to build the contract and generate the ABI from a `near-sdk-rs` contract.
+- [near-sdk-rs](https://github.com/near/near-sdk-rs) (version `4.1.0-pre.3` and above) and [cargo-near](https://github.com/near/cargo-near): `cargo-near` is a [cargo](https://doc.rust-lang.org/cargo/) extention that is used to build the contract and generate the ABI from a `near-sdk-rs` contract.
 
 > Note: This is currently WIP and unstable. Stable released versions and examples to come.
 
