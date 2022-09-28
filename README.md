@@ -21,7 +21,7 @@ An ABI (Application Binary Interface) traditionally defines the interface betwee
 - Tooling built using the ABI to be able to generate code to interact with any contract easily
 
 ## Usage
-Ensure you have [cargo-near](https://github.com/near/cargo-near/blob/main/README.md) installed
+Ensure you have [cargo-near](https://github.com/near/cargo-near) installed
 
 To generate an ABI for a contract within the directory containing contract's Cargo.toml
 
