@@ -32,7 +32,7 @@ $ cargo near abi
 Ensure that the project you are generating an ABI for depends on a version of `near-sdk` of `4.1.0-pre.3` or later and has the `abi` feature enabled.
 
 ```toml
-near-sdk = { version = "4.1.0-pre.3", features = ["abi"]}
+near-sdk = { version = "4.1.0-pre.3", features = ["abi"] }
 ```
 
 ## Supported tools:
