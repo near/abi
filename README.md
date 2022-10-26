@@ -50,3 +50,4 @@ near-sdk = { version = "4.1.0-pre.3", features = ["abi"] }
 
 ### Utility Libraries
 - [near-abi-rs](https://github.com/near/near-abi-rs): Common Rust types used across Rust ABI crates.
+- [near-abi-js](https://github.com/near/near-abi-js): Common types used across JavaScript ABI libraries.
