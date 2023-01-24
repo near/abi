@@ -7,7 +7,7 @@
   </p>
 </div>
 
-❗ **Warning: Format and tooling has not been finalized, should only be used for testing/experimentation**
+⚠️ **Warning: Format and tooling are not final and changes are likely to happen.**
 
 > What is an ABI?
 
@@ -21,6 +21,8 @@ An ABI (Application Binary Interface) traditionally defines the interface betwee
 - Tooling built using the ABI to be able to generate code to interact with any contract easily
 
 ## Usage
+
+### Rust
 Ensure you have [cargo-near](https://github.com/near/cargo-near) installed
 
 To generate an ABI for a contract within the directory containing contract's Cargo.toml
@@ -29,24 +31,33 @@ To generate an ABI for a contract within the directory containing contract's Car
 $ cargo near abi
 ```
 
-Ensure that the project you are generating an ABI for depends on a version of `near-sdk` of `4.1.0-pre.3` or later and has the `abi` feature enabled.
+Ensure that the project you are generating an ABI for depends on a version of `near-sdk` of `4.1.0` or later and has the `abi` feature enabled.
 
 ```toml
-near-sdk = { version = "4.1.0-pre.3", features = ["abi"] }
+near-sdk = { version = "4.1.0", features = ["abi"] }
 ```
+
+### TypeScript
+Ensure you have a [near-sdk-js](https://github.com/near/near-sdk-js) (version 0.7.0 or later) contract
+
+To generate an ABI for a contract within the directory containing contract's package.json
+
+```console
+$ npx near-sdk-js build --generateABI path/to/contract.ts
+```
+
+The ABI will be put in `build/contract-abi.json`
 
 ## Supported tools:
 
 ### ABI generation
-
-- [near-sdk-rs](https://github.com/near/near-sdk-rs) (version `4.1.0-pre.3` and above) and [cargo-near](https://github.com/near/cargo-near): `cargo-near` is a [cargo](https://doc.rust-lang.org/cargo/) extention that is used to build the contract and generate the ABI from a `near-sdk-rs` contract.
-
-> Note: This is currently WIP and unstable. Stable released versions and examples to come.
+- [near-sdk-rs](https://github.com/near/near-sdk-rs) (version `4.1.0` and above) and [cargo-near](https://github.com/near/cargo-near) (version `0.3.0` and above): `cargo-near` is a [cargo](https://doc.rust-lang.org/cargo/) extention that is used to build the contract and generate the ABI from a `near-sdk-rs` contract.
+- [near-sdk-js](https://github.com/near/near-sdk-js) (version `0.7.0` and above): invoke `near-sdk-js build` with `--generateABI` to generate the ABI from a TypeScript contract (pure JavaScript is not supported yet).
 
 ### ABI clients
 - [near-abi-client-rs](https://github.com/near/near-abi-client-rs): Generates glue code to interact with contracts through RPC using [workspaces-rs](https://github.com/near/workspaces-rs).
-- [near-abi-client-js](https://github.com/near/near-abi-client-js): Generates JS glue code to interact with contracts through RPC using [near-api-js](https://github.com/near/near-api-js).
 - [near-sdk-abi](https://github.com/near/near-sdk-abi): Generates [near-sdk-rs](https://github.com/near/near-sdk-rs) glue code to make cross-contract calls within other contracts.
+- [near-api-js](https://github.com/near/near-api-js): integration with NAJ is coming soon, stay tuned.
 
 ### Utility Libraries
 - [near-abi-rs](https://github.com/near/near-abi-rs): Common Rust types used across Rust ABI crates.
