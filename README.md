@@ -60,5 +60,6 @@ The ABI will be put in `build/contract-abi.json`
 - [near-api-js](https://github.com/near/near-api-js): integration with NAJ is coming soon, stay tuned.
 
 ### Utility Libraries
+- [near2ts](https://github.com/SurgeCode/near2ts): Generate typescript types from ABI `npx near2ts devhub.near`
 - [near-abi-rs](https://github.com/near/near-abi-rs): Common Rust types used across Rust ABI crates.
 - [near-abi-js](https://github.com/near/near-abi-js): Common types used across JavaScript ABI libraries.
